@@ -11,9 +11,9 @@
     <main>
         <h1>備品購入申請</h1>
         <p>購入したい備品について、すべての項目を入力してください。</p>
-        <p>現在は入力の練習用です。入力内容は送信・保存されません。</p>
+        <p>入力内容を送信して表示する練習です。内容は保存されません。</p>
 
-        <form>
+        <form action="submit.php" method="post">
             <p>
                 <label for="applicant_name">申請者名</label><br>
                 <input type="text" id="applicant_name" name="applicant_name" required maxlength="50">
@@ -34,7 +34,7 @@
                 <textarea id="reason" name="reason" required maxlength="500" rows="4"></textarea>
             </p>
 
-            <button type="submit" disabled>申請する（準備中）</button>
+            <button type="submit">申請する</button>
         </form>
     </main>
 </body>
