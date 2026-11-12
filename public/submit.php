@@ -3,28 +3,36 @@ header('Content-Type: text/html; charset=UTF-8');
 
 $applicantName = $_POST['applicant_name'] ?? '';
 
-if (!is_string($applicantName)){
-    exit('申請者名の形式が正しくありません。');
+if ($applicantName === ''){
+    echo '<p>申請者名を入力してください。</p>';
+} else {
+    echo '<p>申請者名が入力されています。</p>';
 }
 echo htmlspecialchars($applicantName, ENT_QUOTES, 'UTF-8');
 
 $itemName = $_POST['item_name'] ?? '';
 
-if (!is_string($itemName)) {
-    exit('備品名の形式が正しくありません。');
+if ($itemName === '') {
+    echo '<p>備品名を入力してください。</p>';
+} else {
+    echo '<p>備品名が入力されています。</p>';
 }
 echo htmlspecialchars($itemName, ENT_QUOTES, 'UTF-8');
 
 $Amount = $_POST['amount'] ?? '';
 
-if (!is_string($Amount)) {
-    exit('金額の形式が正しくありません。');
+if ($Amount === '') {
+    echo '<p>金額を入力してください。</p>';
+} else {
+    echo '<p>金額が入力されています。</p>';
 }
 echo htmlspecialchars($Amount, ENT_QUOTES, 'UTF-8');
 
 $Reason = $_POST['reason'] ?? '';
 
-if (!is_string($Reason)) {
-    exit('購入理由の形式が正しくありません。');
+if (htmlspecialchars($Reason, ENT_QUOTES, 'UTF-8') === '') {
+    echo '<p>購入理由を入力してください。</p>';
+} else {
+    echo '<p>購入理由が入力されています。</p>';
 }
 echo htmlspecialchars($Reason, ENT_QUOTES, 'UTF-8');
